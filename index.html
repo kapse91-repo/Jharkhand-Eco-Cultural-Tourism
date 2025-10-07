@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" /> 
+  <title>Jharkhand Eco & Cultural Tourism — Smart Platform</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Jharkhand Eco & Cultural Tourism</h1>
+    <p class="tag">Smart digital platform — Personalized itineraries & Multilingual voice assistant</p>
+  </header>
+
+  <main>
+    <section id="controls" class="card">
+      <h2>Plan your trip</h2>
+      <label>Travel days:
+        <input id="days" type="number" min="1" max="14" value="3" />
+      </label>
+
+      <label>Interests:</label>
+      <div class="chips">
+        <button class="chip" data-tag="nature">Nature</button>
+        <button class="chip" data-tag="culture">Culture</button>
+        <button class="chip" data-tag="adventure">Adventure</button>
+        <button class="chip" data-tag="history">History</button>
+        <button class="chip" data-tag="wildlife">Wildlife</button>
+      </div>
+
+      <label>Accessibility / pace:
+        <select id="pace">
+          <option value="relaxed">Relaxed</option>
+          <option value="moderate" selected>Moderate</option>
+          <option value="busy">Busy</option>
+        </select>
+      </label>
+
+      <button id="generate" class="primary">Generate itinerary (AI)</button>
+      <div id="itinerary" class="result"></div>
+    </section>
+
+    <section id="assistant" class="card">
+      <h2>Multilingual Voice Assistant</h2>
+      <div class="lang-row">
+        <label for="language">Language:</label>
+        <select id="language">
+          <option value="en-US">English (US)</option>
+          <option value="hi-IN">Hindi (India)</option>
+          <option value="bn-IN">Bengali (India)</option>
+          <option value="or-IN">Odia (India)</option>
+          <!-- Add more locales as needed -->
+        </select>
+      </div>
+
+      <div class="assistant-controls">
+        <button id="start-rec">Start Listening</button>
+        <button id="stop-rec" disabled>Stop</button>
+        <button id="speak-sample">Speak Sample Prompt</button>
+      </div>
+
+      <div id="transcript" class="result"></div>
+      <div id="assistant-response" class="result"></div>
+    </section>
+
+    <section id="attractions" class="card">
+      <h2>Sample Attractions (Jharkhand)</h2>
+      <ul id="attraction-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <small>Prototype — Replace simulated AI with a real API for production usage.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
